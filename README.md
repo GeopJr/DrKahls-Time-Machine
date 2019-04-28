@@ -29,6 +29,8 @@ An online Cuphead save editor
 
 ### Thanks to [crumblingstatue](https://github.com/crumblingstatue) for the general idea (and name)
 
+### [Vanilla Modal](https://github.com/benceg/vanilla-modal) by [benceg](https://github.com/benceg)
+
 <div align="center">
   <br />
   <p>
