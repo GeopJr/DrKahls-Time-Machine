@@ -1,7 +1,7 @@
-try {
-    var filenameSave = ""
+var filenameSave = ""
 
-    function readSingleFile(e) {
+function readSingleFile(e) {
+    try {
         var file = e.target.files[0];
         filenameSave = e.target.files[0].name
         if (!file) {
@@ -13,11 +13,16 @@ try {
             displayContents(contents);
         };
         reader.readAsText(file);
+    } catch (e) {
+        alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+        console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
     }
+}
 
-    var savebefore = []
+var savebefore = []
 
-    function displayContents(contents) {
+function displayContents(contents) {
+    try {
         var element = document.getElementById('file-content');
         element.textContent = JSON.stringify(JSON.parse(contents), null, "\t");
         var obj = JSON.parse(contents)
@@ -220,10 +225,14 @@ try {
             }
         })
         document.getElementById("savebtn").disabled = false;
-
+    } catch (e) {
+        alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+        console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
     }
+}
 
-    function download() {
+function download() {
+    try {
         savedat = savebefore[0]
         savedat["isPlayer1Mugman"] = JSON.parse(document.getElementById('isPlayer1Mugman').value)
         savedat["hasMadeFirstPurchase"] = JSON.parse(document.getElementById('hasMadeFirstPurchase').value)
@@ -489,9 +498,14 @@ try {
                 window.URL.revokeObjectURL(url);
             }, 0);
         }
+    } catch (e) {
+        alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+        console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
     }
+}
 
-    function updateJson() {
+function updateJson() {
+    try {
         savedat = savebefore[0]
         savedat["isPlayer1Mugman"] = JSON.parse(document.getElementById('isPlayer1Mugman').value)
         savedat["hasMadeFirstPurchase"] = JSON.parse(document.getElementById('hasMadeFirstPurchase').value)
@@ -740,11 +754,15 @@ try {
         var saveafter = savedat
         var element = document.getElementById('file-content');
         element.textContent = JSON.stringify(saveafter, null, "\t");
+    } catch (e) {
+        alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+        console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
     }
-
+}
+try {
     document.getElementById('file-input')
         .addEventListener('change', readSingleFile, false);
 } catch (e) {
-    alert("[Error]" + e + "\n Open an issue or Discord:『Geop』#4066")
-    console.log("[Error]" + e + "\n Open an issue or Discord:『Geop』#4066")
+    alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+    console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
 }
