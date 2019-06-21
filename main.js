@@ -7,6 +7,10 @@ function readSingleFile(e) {
         if (!file) {
             return;
         }
+        var filenameExtenstion = filenameSave.split(".")[filenameSave.split(".").length-1].toLowerCase()
+        if (filenameExtenstion != "sav") {
+            throw "notSav." + filenameExtenstion;
+        }
         var reader = new FileReader();
         reader.onload = function(e) {
             var contents = e.target.result;
@@ -14,8 +18,13 @@ function readSingleFile(e) {
         };
         reader.readAsText(file);
     } catch (e) {
+        if (e.split(".")[0] == "notSav") {
+        alert("[Error] You didn't provide a .sav file\nBut instead a ." + e.split(".")[1] + "file")
+        console.log("[Error] You didn't provide a .sav file\nBut instead a ." + e.split(".")[1] + "file")
+        } else {
         alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
         console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+        }
     }
 }
 
