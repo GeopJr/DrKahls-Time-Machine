@@ -7,23 +7,23 @@ function readSingleFile(e) {
         if (!file) {
             return;
         }
-        var filenameExtenstion = filenameSave.split(".")[filenameSave.split(".").length-1].toLowerCase()
+        var filenameExtenstion = filenameSave.split(".")[filenameSave.split(".").length - 1].toLowerCase()
         if (filenameExtenstion != "sav") {
             throw "notSav." + filenameExtenstion;
         }
         var reader = new FileReader();
-        reader.onload = function(e) {
+        reader.onload = function (e) {
             var contents = e.target.result;
             displayContents(contents);
         };
         reader.readAsText(file);
     } catch (e) {
         if (e.split(".")[0] == "notSav") {
-        alert("[Error] You didn't provide a .sav file\nBut instead a ." + e.split(".")[1] + " file")
-        console.log("[Error] You didn't provide a .sav file\nBut instead a ." + e.split(".")[1] + " file")
+            alert("[Error] You didn't provide a .sav file\nBut instead a ." + e.split(".")[1] + " file")
+            console.log("[Error] You didn't provide a .sav file\nBut instead a ." + e.split(".")[1] + " file")
         } else {
-        alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
-        console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+            alert("[Error] " + e)
+            console.log("[Error] " + e)
         }
     }
 }
@@ -235,8 +235,8 @@ function displayContents(contents) {
         })
         document.getElementById("savebtn").disabled = false;
     } catch (e) {
-        alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
-        console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+        alert("[Error] " + e)
+        console.log("[Error] " + e)
     }
 }
 
@@ -264,7 +264,7 @@ function download() {
 
         const rngs = [1464969490, 1464969491, 1499704951, 1496818712, 1464969492, 1464969493]
 
-        savedat["coinManager"]["LevelsAndCoins"].forEach(function(item) {
+        savedat["coinManager"]["LevelsAndCoins"].forEach(function (item) {
 
             if (rngs.includes(item["level"])) {
 
@@ -467,7 +467,7 @@ function download() {
         savedat["inventories"]["playerTwo"]["_charms"] = charmz2
 
         const levelss = [0, 2, 5, 6, 7, 1428495827, 1429976377, 1430652919, 1432722919, 1446558823, 1449745424, 1450266910, 1450863107, 1451300935, 1452935394, 1456125457, 1456740288, 1458062114, 1458336090, 1458551456, 1458719430, 1459105708, 1459928905, 1460200177, 1463479514, 1464322003, 1465296077, 1466688317, 1468483834, 1481199742, 1484633053, 1495090481, 1504847973]
-        savedat["levelDataManager"]["levelObjects"].forEach(function(item) {
+        savedat["levelDataManager"]["levelObjects"].forEach(function (item) {
 
             if (levelss.includes(item["levelID"])) {
                 if (parseFloat((document.getElementById(`${item["levelID"]}time`).value).replace(/,/g, ".")) == 0) {
@@ -502,14 +502,14 @@ function download() {
             a.download = filename;
             document.body.appendChild(a);
             a.click();
-            setTimeout(function() {
+            setTimeout(function () {
                 document.body.removeChild(a);
                 window.URL.revokeObjectURL(url);
             }, 0);
         }
     } catch (e) {
-        alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
-        console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+        alert("[Error] " + e)
+        console.log("[Error] " + e)
     }
 }
 
@@ -537,7 +537,7 @@ function updateJson() {
 
         const rngs = [1464969490, 1464969491, 1499704951, 1496818712, 1464969492, 1464969493]
 
-        savedat["coinManager"]["LevelsAndCoins"].forEach(function(item) {
+        savedat["coinManager"]["LevelsAndCoins"].forEach(function (item) {
 
             if (rngs.includes(item["level"])) {
 
@@ -740,7 +740,7 @@ function updateJson() {
         savedat["inventories"]["playerTwo"]["_charms"] = charmz2
 
         const levelss = [0, 2, 5, 6, 7, 1428495827, 1429976377, 1430652919, 1432722919, 1446558823, 1449745424, 1450266910, 1450863107, 1451300935, 1452935394, 1456125457, 1456740288, 1458062114, 1458336090, 1458551456, 1458719430, 1459105708, 1459928905, 1460200177, 1463479514, 1464322003, 1465296077, 1466688317, 1468483834, 1481199742, 1484633053, 1495090481, 1504847973]
-        savedat["levelDataManager"]["levelObjects"].forEach(function(item) {
+        savedat["levelDataManager"]["levelObjects"].forEach(function (item) {
 
             if (levelss.includes(item["levelID"])) {
                 if (parseFloat((document.getElementById(`${item["levelID"]}time`).value).replace(/,/g, ".")) == 0) {
@@ -764,14 +764,14 @@ function updateJson() {
         var element = document.getElementById('file-content');
         element.textContent = JSON.stringify(saveafter, null, "\t");
     } catch (e) {
-        alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
-        console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+        alert("[Error] " + e)
+        console.log("[Error] " + e)
     }
 }
 try {
     document.getElementById('file-input')
         .addEventListener('change', readSingleFile, false);
 } catch (e) {
-    alert("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
-    console.log("[Error] " + e + "\n Open an issue or Discord:『Geop』#4066")
+    alert("[Error] " + e)
+    console.log("[Error] " + e)
 }

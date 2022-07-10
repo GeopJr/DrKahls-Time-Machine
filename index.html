@@ -1,50 +1,56 @@
-
-
 <!DOCTYPE html5>
-<!--
-   Licensed under MIT
-   -->
 <html>
-   <head>
-      <meta charset="utf-8">
-      <!-- META -->
-      <title>Dr. Kahl's Time Machine</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="author" content="Geop Junior">
-      <meta name="copyright" content="Geop Junior">
-      <link rel="canonical" href="https://geopjr.xyz" />
-      <meta name="description" content="Dr. Kahl's Time Machine">
-      <meta name="theme-color" content="#ffff00">
-      <link href="assets/css/number15.css" type="text/css" rel="stylesheet">
-      <link href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css" rel="stylesheet">
-      <style>
-         body {font-family: Ubuntu;background-color: #ffcc00;}
-         table {
+
+<head>
+   <meta charset="utf-8">
+   <!-- META -->
+   <title>Dr. Kahl's Time Machine</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="canonical" href="https://dr.kahls-time-machine.geopjr.dev" />
+   <meta name="description" content="Dr. Kahl's Time Machine">
+   <meta name="theme-color" content="#ffff00">
+   <link href="assets/css/number15.css" type="text/css" rel="stylesheet">
+   <link href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css" rel="stylesheet">
+   <style>
+      body {
+         font-family: Ubuntu;
+         background-color: #ffcc00;
+      }
+
+      table {
          border-collapse: collapse;
-         background-color: rgba(0,0,0,0.401);
-         display:inline-block;
-         vertical-align:top;
+         background-color: rgba(0, 0, 0, 0.401);
+         display: inline-block;
+         vertical-align: top;
          margin: 5px;
-         }
-         th {
-         background-color: rgba(0,0,0,0.5);
-         }
-         table, td, th {
+      }
+
+      th {
+         background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      table,
+      td,
+      th {
          border: 1px solid black;
          text-align: center;
-         }
-         td, th {
+      }
+
+      td,
+      th {
          color: #fff;
-         }
-         /* Style the tab */
-         .tab {
+      }
+
+      /* Style the tab */
+      .tab {
          overflow: hidden;
          border: 1px solid #000;
-         background-color: rgba(0,0,0,0.5);
-         }
-         /* Style the buttons inside the tab */
-         .tab button {
-         background-color: rgba(0,0,0,0);
+         background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      /* Style the buttons inside the tab */
+      .tab button {
+         background-color: rgba(0, 0, 0, 0);
          float: center;
          border: none;
          outline: none;
@@ -53,2567 +59,2629 @@
          transition: 0.3s;
          font-size: 17px;
          text-align: center;
-         color:#fff;
-         }
-         /* Change background color of buttons on hover */
-         .tab button:hover {
-         background-color: rgba(0,0,0,0.1);
-         }
-         /* Create an active/current tablink class */
-         .tab button.active {
-         background-color: rgba(0,0,0,0.3);
-         }
-         /* Style the tab content */
-         .tabcontent {
+         color: #fff;
+      }
+
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+         background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      /* Create an active/current tablink class */
+      .tab button.active {
+         background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      /* Style the tab content */
+      .tabcontent {
          display: none;
          padding: 6px 12px;
          border: 1px solid #000;
          border-top: none;
-         background-color: rgba(0,0,0,0.2)
-         }
-      </style>
-      <!-- APPLE -->
-         <meta name="apple-mobile-web-app-capable" content="yes">
-         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-         <meta name="apple-mobile-web-app-title" content="『Geop』">
-         <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-      <!-- FAVICONS -->
-      <link rel="icon" sizes="32x32" href="/assets/images/favicon-32x32.png?v=1" type="image/png">
-         <link rel="icon" sizes="16x16" href="/assets/images/favicon-16x16.png?v=1" type="image/png">
-         <link rel="icon" href="/assets/images/favicon.ico?v=1" type="image/x-icon">
-         <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="『Geop』">
-      <!-- OG -->
-         <meta property="og:description" content="An online Cuphead save editor">
-         <meta name="og:site_name" content="『Geop』#4066">
-         <meta property="og:title" content="Dr. Kahl's Time Machine">
-         <meta property="og:type" content="website">
-         <meta property="og:url" content="https://geopjr.xyz/">
-         <meta name="og:image" content="https://i.imgur.com/08iKZH7.png">
-         <meta property="og:image:type" content="image/png">
-   </head>
-   <body>
-      <div id="modalsave" style="display:none">
-         <div style="color: red"><div style="font-size: 20px;">!IMPORTANT!</div>By saving you agree with the following:<br><br>- I, the creator of this service, am not responsible for any data loss<br>- Won't exploit any bugs<br>- Won't harass anyone who contributed to this</div>
-         <br>
-         <button onclick="download()" id="savebtn">Save...</button><br><br>
-         <div style="font-size: 10px;">Please star me!</div>
-         <a class="github-button" href="https://github.com/GeopJr/DrKahls-Time-Machine" data-show-count="true" aria-label="Star GeopJr/DrKahls-Time-Machine on GitHub">Star</a>
+         background-color: rgba(0, 0, 0, 0.2)
+      }
+   </style>
+   <!-- APPLE -->
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+   <meta name="apple-mobile-web-app-title" content="『Geop』">
+   <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+   <!-- FAVICONS -->
+   <link rel="icon" sizes="32x32" href="/assets/images/favicon-32x32.png?v=1" type="image/png">
+   <link rel="icon" sizes="16x16" href="/assets/images/favicon-16x16.png?v=1" type="image/png">
+   <link rel="icon" href="/assets/images/favicon.ico?v=1" type="image/x-icon">
+   <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="『Geop』">
+   <!-- OG -->
+   <meta property="og:description" content="An online Cuphead save editor">
+   <meta property="og:title" content="Dr. Kahl's Time Machine">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://dr.kahls-time-machine.geopjr.dev/">
+   <meta name="og:image" content="https://i.imgur.com/08iKZH7.png">
+   <meta property="og:image:type" content="image/png">
+</head>
+
+<body>
+   <div id="modalsave" style="display:none">
+      <div style="color: red">
+         <div style="font-size: 20px;">!IMPORTANT!</div>By saving you agree with the following:<br><br>- I, the creator
+         of this service, am not responsible for any data loss<br>- Won't exploit any bugs<br>- Won't harass anyone who
+         contributed to this
       </div>
-      <div id="modalcredits" style="display:none">
-         <div style="font-size: 20px;">Creator/Maintainer:<br><br><a href="https://github.com/GeopJr/" style="text-decoration: underline;font-weight:normal;color: #fff">GeopJr</a></div><br>
-         <div style="font-size: 20px;">IDs/Info:<br><br><a href="https://www.reddit.com/user/HylianAngel" style="text-decoration: underline;font-weight:normal;color: #fff">HylianAngel</a></div><br>
-         <div style="font-size: 20px;">Idea:<br><br><a href="https://crumblingstatue.github.io/FloweysTimeMachine/" style="text-decoration: underline;font-weight:normal;color: #fff">crumblingstatue</a></div>
-      </div>
-      <div class="modal">
-         <div class="modal-inner">
-            <div class="modal-content"></div>
-         </div>
-      </div>
-      <a href="https://github.com/GeopJr/DrKahls-Time-Machine" class="github-corner" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
-      <img src="https://i.imgur.com/08iKZH7.png" style="width: 5vw;vertical-align: middle"><h8>Dr. Kahl's Time Machine</h8>
       <br>
-      
+      <button onclick="download()" id="savebtn">Save...</button><br><br>
+      <div style="font-size: 10px;">Please star me!</div>
+      <a class="github-button" href="https://github.com/GeopJr/DrKahls-Time-Machine" data-show-count="true"
+         aria-label="Star GeopJr/DrKahls-Time-Machine on GitHub">Star</a>
+   </div>
+   <div id="modalcredits" style="display:none">
+      <div style="font-size: 20px;">Creator/Maintainer:<br><br><a href="https://github.com/GeopJr/"
+            style="text-decoration: underline;font-weight:normal;color: #fff">GeopJr</a></div><br>
+      <div style="font-size: 20px;">IDs/Info:<br><br><a href="https://www.reddit.com/user/HylianAngel"
+            style="text-decoration: underline;font-weight:normal;color: #fff">HylianAngel</a></div><br>
+      <div style="font-size: 20px;">Idea:<br><br><a href="https://crumblingstatue.github.io/FloweysTimeMachine/"
+            style="text-decoration: underline;font-weight:normal;color: #fff">crumblingstatue</a></div>
+   </div>
+   <div class="modal">
+      <div class="modal-inner">
+         <div class="modal-content"></div>
+      </div>
+   </div>
+   <a href="https://github.com/GeopJr/DrKahls-Time-Machine" class="github-corner"
+      aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250"
+         style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+         <path
+            d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+            fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+         <path
+            d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+            fill="currentColor" class="octo-body"></path>
+      </svg></a>
+   <style>
+      .github-corner:hover .octo-arm {
+         animation: octocat-wave 560ms ease-in-out
+      }
+
+      @keyframes octocat-wave {
+
+         0%,
+         100% {
+            transform: rotate(0)
+         }
+
+         20%,
+         60% {
+            transform: rotate(-25deg)
+         }
+
+         40%,
+         80% {
+            transform: rotate(10deg)
+         }
+      }
+
+      @media (max-width:500px) {
+         .github-corner:hover .octo-arm {
+            animation: none
+         }
+
+         .github-corner .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+         }
+      }
+   </style>
+   <img src="https://i.imgur.com/08iKZH7.png" style="width: 5vw;vertical-align: middle">
+   <h8>Dr. Kahl's Time Machine</h8>
+   <br>
+
+   <table align="center">
+      <tr>
+         <td><input type="file" id="file-input" accept=".sav" /></td>
+         <td><a class="github-button" href="https://github.com/GeopJr/DrKahls-Time-Machine/issues"
+               data-icon="octicon-issue-opened" aria-label="Issue GeopJr/DrKahls-Time-Machine on GitHub">Issue</a></td>
+      </tr>
+      <tr>
+         <td><a href="#modalsave" data-modal-open><button>Export</button></a></td>
+         <td><a href="#modalcredits" data-modal-open><button>Credits</button></a></td>
+      </tr>
+   </table>
+   <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Basics')">Basic</button>
+      <button class="tablinks" onclick="openTab(event, 'Inventories')">Inventory</button>
+      <button class="tablinks" onclick="openTab(event, 'Coinss')">Coins</button>
+      <button class="tablinks" onclick="openTab(event, 'Levelss')">Levels</button>
+      <button class="tablinks" onclick="openTab(event, 'Preview');updateJson()">Preview</button>
+   </div>
+   <div id="Basics" class="tabcontent">
       <table align="center">
-        <tr><td><input type="file" id="file-input" accept=".sav" /></td><td><a class="github-button" href="https://github.com/GeopJr/DrKahls-Time-Machine/issues" data-icon="octicon-issue-opened" aria-label="Issue GeopJr/DrKahls-Time-Machine on GitHub">Issue</a></td></tr>
-        <tr><td><a href="#modalsave" data-modal-open><button>Export</button></a></td><td><a href="#modalcredits" data-modal-open><button>Credits</button></a></td></tr>
+         <tr>
+            <td>Character</td>
+            <td>
+               <select id="isPlayer1Mugman">
+                  <option value="false">Cuphead</option>
+                  <option value="true">Mugman</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Made first purchase?</td>
+            <td>
+               <select id="hasMadeFirstPurchase">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Beaten any boss on Easy?</td>
+            <td>
+               <select id="hasBeatenAnyBossOnEasy">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Completed a mausoleum?</td>
+            <td>
+               <select id="hasUnlockedFirstSuper">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Should show shopkeep's tooltip?</td>
+            <td>
+               <select id="shouldShowShopkeepTooltip">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Should show turtle's tooltip (for monochrome)?</td>
+            <td>
+               <select id="shouldShowTurtleTooltip">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Should show canteen's tooltip (for mini-bombs)?</td>
+            <td>
+               <select id="shouldShowCanteenTooltip">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Should show fork's tooltip (for 2-tone-filter)?</td>
+            <td>
+               <select id="shouldShowForkTooltip">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Should show King Dice's tooltip (in case you played Easy)?</td>
+            <td>
+               <select id="shouldShowKineDiceTooltip">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Should show mausoleum's tooltip (how to equip super)?</td>
+            <td>
+               <select id="shouldShowMausoleumTooltip">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Is hard mode available?</td>
+            <td>
+               <select id="_isHardModeAvailable">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Is tutorial completed?</td>
+            <td>
+               <select id="_isTutorialCompleted">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Is flying tutorial completed?</td>
+            <td>
+               <select id="_isFlyingTutorialCompleted">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Unlocked Black & White?</td>
+            <td>
+               <select id="unlockedBlackAndWhite">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Unlocked 2-tone?</td>
+            <td>
+               <select id="unlocked2Strip">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Enabled vintage audio?</td>
+            <td>
+               <select id="vintageAudioEnabled">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Enabled piano audio?</td>
+            <td>
+               <select id="pianoAudioEnabled">
+                  <option value="false">No</option>
+                  <option value="true">Yes</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Enabled filter</td>
+            <td>
+               <select id="filter">
+                  <option value="0">Normal</option>
+                  <option value="1">2-tone</option>
+                  <option value="2">Monochrome</option>
+               </select>
+            </td>
+         </tr>
       </table>
-      <div class="tab">
-         <button class="tablinks" onclick="openTab(event, 'Basics')">Basic</button>
-         <button class="tablinks" onclick="openTab(event, 'Inventories')">Inventory</button>
-         <button class="tablinks" onclick="openTab(event, 'Coinss')">Coins</button>
-         <button class="tablinks" onclick="openTab(event, 'Levelss')">Levels</button>
-         <button class="tablinks" onclick="openTab(event, 'Preview');updateJson()">Preview</button>
-      </div>
-      <div id="Basics" class="tabcontent">
-         <table align="center">
-            <tr>
-               <td>Character</td>
-               <td>
-                  <select id="isPlayer1Mugman">
-                     <option value="false">Cuphead</option>
-                     <option value="true">Mugman</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Made first purchase?</td>
-               <td>
-                  <select id="hasMadeFirstPurchase">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Beaten any boss on Easy?</td>
-               <td>
-                  <select id="hasBeatenAnyBossOnEasy">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Completed a mausoleum?</td>
-               <td>
-                  <select id="hasUnlockedFirstSuper">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Should show shopkeep's tooltip?</td>
-               <td>
-                  <select id="shouldShowShopkeepTooltip">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Should show turtle's tooltip (for monochrome)?</td>
-               <td>
-                  <select id="shouldShowTurtleTooltip">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Should show canteen's tooltip (for mini-bombs)?</td>
-               <td>
-                  <select id="shouldShowCanteenTooltip">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Should show fork's tooltip (for 2-tone-filter)?</td>
-               <td>
-                  <select id="shouldShowForkTooltip">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Should show King Dice's tooltip (in case you played Easy)?</td>
-               <td>
-                  <select id="shouldShowKineDiceTooltip">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Should show mausoleum's tooltip (how to equip super)?</td>
-               <td>
-                  <select id="shouldShowMausoleumTooltip">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Is hard mode available?</td>
-               <td>
-                  <select id="_isHardModeAvailable">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Is tutorial completed?</td>
-               <td>
-                  <select id="_isTutorialCompleted">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Is flying tutorial completed?</td>
-               <td>
-                  <select id="_isFlyingTutorialCompleted">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Unlocked Black & White?</td>
-               <td>
-                  <select id="unlockedBlackAndWhite">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Unlocked 2-tone?</td>
-               <td>
-                  <select id="unlocked2Strip">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Enabled vintage audio?</td>
-               <td>
-                  <select id="vintageAudioEnabled">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Enabled piano audio?</td>
-               <td>
-                  <select id="pianoAudioEnabled">
-                     <option value="false">No</option>
-                     <option value="true">Yes</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Enabled filter</td>
-               <td>
-                  <select id="filter">
-                     <option value="0">Normal</option>
-                     <option value="1">2-tone</option>
-                     <option value="2">Monochrome</option>
-                  </select>
-               </td>
-            </tr>
-         </table>
-      </div>
-      <div id="Inventories" class="tabcontent">
-         <table align="center">
-            <tr>
-               <th>
-                  Player 1
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Primary
-               </td>
-               <td>
-                  <select id="primaryWeapon1">
-                     <option value="1456773641">Peashooter</option>
-                     <option value="1460621839">Chaser</option>
-                     <option value="1456773649">Spread</option>
-                     <option value="1466518900">Roundabout</option>
-                     <option value="1467024095">Lobber</option>
-                     <option value="1466416941">Charge</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Secondary
-               </td>
-               <td>
-                  <select id="secondaryWeapon1">
-                     <option value="2147483647">Empty</option>
-                     <option value="1456773641">Peashooter</option>
-                     <option value="1460621839">Chaser</option>
-                     <option value="1456773649">Spread</option>
-                     <option value="1466518900">Roundabout</option>
-                     <option value="1467024095">Lobber</option>
-                     <option value="1466416941">Charge</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Super
-               </td>
-               <td>
-                  <select id="super1">
-                     <option value="2147483647">Empty</option>
-                     <option value="1456815409">Super Art I</option>
-                     <option value="1495012282">Super Art II</option>
-                     <option value="1467617939">Super Art III</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Charm
-               </td>
-               <td>
-                  <select id="charm1">
-                     <option value="2147483647">Empty</option>
-                     <option value="1460832742">Heart</option>
-                     <option value="1461001046">Smoke Bomb</option>
-                     <option value="1487051212">P. Sugar</option>
-                     <option value="1460880866">Coffee</option>
-                     <option value="1500621999">Whetstone</option>
-                     <option value="1500641115">Twin Heart</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Deaths
-               </td>
-               <td><input type="number" id="deaths1" value="0"></td>
-            </tr>
-            <tr>
-               <td>
-                  Parries in a row
-               </td>
-               <td><input type="number" id="parries1" value="0"></td>
-            </tr>
-            <tr>
-               <th>
-                  Inventory
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Money
-               </td>
-               <td><input type="number" id="money1" value="0"></td>
-            </tr>
-            <tr>
-               <th>
-                  Weapons
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Peashooter
-               </td>
-               <td><input checked type="checkbox" id="1weapon1" value="1456773641"></td>
-            </tr>
-            <tr>
-               <td>
-                  Chaser
-               </td>
-               <td><input type="checkbox" id="1weapon2" value="1460621839"></td>
-            </tr>
-            <tr>
-               <td>
-                  Spread
-               </td>
-               <td><input type="checkbox" id="1weapon3" value="1456773649"></td>
-            </tr>
-            <tr>
-               <td>
-                  Roundabout
-               </td>
-               <td><input type="checkbox" id="1weapon4" value="1466518900"></td>
-            </tr>
-            <tr>
-               <td>
-                  Lobber
-               </td>
-               <td><input type="checkbox" id="1weapon5" value="1467024095"></td>
-            </tr>
-            <tr>
-               <td>
-                  Charge
-               </td>
-               <td><input type="checkbox" id="1weapon6" value="1466416941"></td>
-            </tr>
-            <tr>
-               <td>
-                  Aeroplane Mini-Bombs
-               </td>
-               <td><input type="checkbox" id="1weapon7" value="1492758857"></td>
-            </tr>
-            <tr>
-               <th>
-                  Supers
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Super Art I
-               </td>
-               <td><input type="checkbox" id="1super1" value="1456815409"></td>
-            </tr>
-            <tr>
-               <td>
-                  Super Art II
-               </td>
-               <td><input type="checkbox" id="1super2" value="1495012282"></td>
-            </tr>
-            <tr>
-               <td>
-                  Super Art III
-               </td>
-               <td><input type="checkbox" id="1super3" value="1467617939"></td>
-            </tr>
-            <tr>
-               <th>
-                  Charms
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Heart
-               </td>
-               <td><input type="checkbox" id="1charm1" value="1460832742"></td>
-            </tr>
-            <tr>
-               <td>
-                  Smoke Bomb
-               </td>
-               <td><input type="checkbox" id="1charm2" value="1461001046"></td>
-            </tr>
-            <tr>
-               <td>
-                  P. Sugar
-               </td>
-               <td><input type="checkbox" id="1charm3" value="1487051212"></td>
-            </tr>
-            <tr>
-               <td>
-                  Coffee
-               </td>
-               <td><input type="checkbox" id="1charm4" value="1460880866"></td>
-            </tr>
-            <tr>
-               <td>
-                  Whetstone
-               </td>
-               <td><input type="checkbox" id="1charm5" value="1500621999"></td>
-            </tr>
-            <tr>
-               <td>
-                  Twin Heart
-               </td>
-               <td><input type="checkbox" id="1charm6" value="1500641115"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Player 2
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Primary
-               </td>
-               <td>
-                  <select id="primaryWeapon2">
-                     <option value="1456773641">Peashooter</option>
-                     <option value="1460621839">Chaser</option>
-                     <option value="1456773649">Spread</option>
-                     <option value="1466518900">Roundabout</option>
-                     <option value="1467024095">Lobber</option>
-                     <option value="1466416941">Charge</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Secondary
-               </td>
-               <td>
-                  <select id="secondaryWeapon2">
-                     <option value="2147483647">Empty</option>
-                     <option value="1456773641">Peashooter</option>
-                     <option value="1460621839">Chaser</option>
-                     <option value="1456773649">Spread</option>
-                     <option value="1466518900">Roundabout</option>
-                     <option value="1467024095">Lobber</option>
-                     <option value="1466416941">Charge</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Super
-               </td>
-               <td>
-                  <select id="super2">
-                     <option value="2147483647">Empty</option>
-                     <option value="1456815409">Super Art I</option>
-                     <option value="1495012282">Super Art II</option>
-                     <option value="1467617939">Super Art III</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Charm
-               </td>
-               <td>
-                  <select id="charm2">
-                     <option value="2147483647">Empty</option>
-                     <option value="1460832742">Heart</option>
-                     <option value="1461001046">Smoke Bomb</option>
-                     <option value="1487051212">P. Sugar</option>
-                     <option value="1460880866">Coffee</option>
-                     <option value="1500621999">Whetstone</option>
-                     <option value="1500641115">Twin Heart</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Deaths
-               </td>
-               <td><input type="number" id="deaths2" value="0"></td>
-            </tr>
-            <tr>
-               <td>
-                  Parries in a row
-               </td>
-               <td><input type="number" id="parries2" value="0"></td>
-            </tr>
-            <tr>
-               <th>
-                  Inventory
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Money
-               </td>
-               <td><input type="number" id="money2" value="0"></td>
-            </tr>
-            <tr>
-               <th>
-                  Weapons
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Peashooter
-               </td>
-               <td><input checked type="checkbox" id="2weapon1" value="1456773641"></td>
-            </tr>
-            <tr>
-               <td>
-                  Chaser
-               </td>
-               <td><input type="checkbox" id="2weapon2" value="1460621839"></td>
-            </tr>
-            <tr>
-               <td>
-                  Spread
-               </td>
-               <td><input type="checkbox" id="2weapon3" value="1456773649"></td>
-            </tr>
-            <tr>
-               <td>
-                  Roundabout
-               </td>
-               <td><input type="checkbox" id="2weapon4" value="1466518900"></td>
-            </tr>
-            <tr>
-               <td>
-                  Lobber
-               </td>
-               <td><input type="checkbox" id="2weapon5" value="1467024095"></td>
-            </tr>
-            <tr>
-               <td>
-                  Charge
-               </td>
-               <td><input type="checkbox" id="2weapon6" value="1466416941"></td>
-            </tr>
-            <tr>
-               <td>
-                  Aeroplane Mini-Bombs
-               </td>
-               <td><input type="checkbox" id="2weapon7" value="1492758857"></td>
-            </tr>
-            <tr>
-               <th>
-                  Supers
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Super Art I
-               </td>
-               <td><input type="checkbox" id="2super1" value="1456815409"></td>
-            </tr>
-            <tr>
-               <td>
-                  Super Art II
-               </td>
-               <td><input type="checkbox" id="2super2" value="1495012282"></td>
-            </tr>
-            <tr>
-               <td>
-                  Super Art III
-               </td>
-               <td><input type="checkbox" id="2super3" value="1467617939"></td>
-            </tr>
-            <tr>
-               <th>
-                  Charms
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Heart
-               </td>
-               <td><input type="checkbox" id="2charm1" value="1460832742"></td>
-            </tr>
-            <tr>
-               <td>
-                  Smoke Bomb
-               </td>
-               <td><input type="checkbox" id="2charm2" value="1461001046"></td>
-            </tr>
-            <tr>
-               <td>
-                  P. Sugar
-               </td>
-               <td><input type="checkbox" id="2charm3" value="1487051212"></td>
-            </tr>
-            <tr>
-               <td>
-                  Coffee
-               </td>
-               <td><input type="checkbox" id="2charm4" value="1460880866"></td>
-            </tr>
-            <tr>
-               <td>
-                  Whetstone
-               </td>
-               <td><input type="checkbox" id="2charm5" value="1500621999"></td>
-            </tr>
-            <tr>
-               <td>
-                  Twin Heart
-               </td>
-               <td><input type="checkbox" id="2charm6" value="1500641115"></td>
-            </tr>
-         </table>
-      </div>
-      <div id="Coinss" class="tabcontent">
-         <table align="center">
-            <tr>
-               <th>
-                  Coins
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Juggler's
-               </td>
-               <td><input type="checkbox" id="juggler" value="1"></td>
-            </tr>
-            <tr>
-               <td>
-                  Gingerbread Girl's
-               </td>
-               <td><input type="checkbox" id="ggirl" value="2"></td>
-            </tr>
-            <tr>
-               <td>
-                  World 2 Hidden's
-               </td>
-               <td><input type="checkbox" id="hidworld" value="3"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Run n gun
-               </th>
-            </tr>
-            <tr>
-               <th>
-                  1-1: Forest Follies
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  <input type="range" id="1464969490" min="0" max="5" value="0" onchange="firstfirst(this.value);">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <input type="text" id="1-1" value="0">
-               </td>
-            </tr>
-            <tr>
-               <th>
-                  1-2: Treetop Trouble
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  <input type="range" id="1464969491" min="0" max="5" value="0" onchange="firstsecond(this.value);">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <input type="text" id="1-2" value="0">
-               </td>
-            </tr>
-            <tr>
-               <th>
-                  2-1: Funfair Fever
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  <input type="range" id="1499704951" min="0" max="5" value="0" onchange="secondfirst(this.value);">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <input type="text" id="2-1" value="0">
-               </td>
-            </tr>
-            <tr>
-               <th>
-                  2-2: Funhouse Frazzle
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  <input type="range" id="1496818712" min="0" max="5" value="0" onchange="secondsecond(this.value);">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <input type="text" id="2-2" value="0">
-               </td>
-            </tr>
-            <tr>
-               <th>
-                  3-1: Perilous Piers
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  <input type="range" id="1464969492" min="0" max="5" value="0" onchange="thirdfirst(this.value);">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <input type="text" id="3-1" value="0">
-               </td>
-            </tr>
-            <tr>
-               <th>
-                  3-2: Rugged Ridge
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  <input type="range" id="1464969493" min="0" max="5" value="0" onchange="thirdsecond(this.value);">
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <input type="text" id="3-2" value="0">
-               </td>
-            </tr>
-         </table>
-      </div>
-      <div id="Levelss" class="tabcontent">
-         <!--   Levels:
+   </div>
+   <div id="Inventories" class="tabcontent">
+      <table align="center">
+         <tr>
+            <th>
+               Player 1
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Primary
+            </td>
+            <td>
+               <select id="primaryWeapon1">
+                  <option value="1456773641">Peashooter</option>
+                  <option value="1460621839">Chaser</option>
+                  <option value="1456773649">Spread</option>
+                  <option value="1466518900">Roundabout</option>
+                  <option value="1467024095">Lobber</option>
+                  <option value="1466416941">Charge</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Secondary
+            </td>
+            <td>
+               <select id="secondaryWeapon1">
+                  <option value="2147483647">Empty</option>
+                  <option value="1456773641">Peashooter</option>
+                  <option value="1460621839">Chaser</option>
+                  <option value="1456773649">Spread</option>
+                  <option value="1466518900">Roundabout</option>
+                  <option value="1467024095">Lobber</option>
+                  <option value="1466416941">Charge</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Super
+            </td>
+            <td>
+               <select id="super1">
+                  <option value="2147483647">Empty</option>
+                  <option value="1456815409">Super Art I</option>
+                  <option value="1495012282">Super Art II</option>
+                  <option value="1467617939">Super Art III</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Charm
+            </td>
+            <td>
+               <select id="charm1">
+                  <option value="2147483647">Empty</option>
+                  <option value="1460832742">Heart</option>
+                  <option value="1461001046">Smoke Bomb</option>
+                  <option value="1487051212">P. Sugar</option>
+                  <option value="1460880866">Coffee</option>
+                  <option value="1500621999">Whetstone</option>
+                  <option value="1500641115">Twin Heart</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Deaths
+            </td>
+            <td><input type="number" id="deaths1" value="0"></td>
+         </tr>
+         <tr>
+            <td>
+               Parries in a row
+            </td>
+            <td><input type="number" id="parries1" value="0"></td>
+         </tr>
+         <tr>
+            <th>
+               Inventory
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Money
+            </td>
+            <td><input type="number" id="money1" value="0"></td>
+         </tr>
+         <tr>
+            <th>
+               Weapons
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Peashooter
+            </td>
+            <td><input checked type="checkbox" id="1weapon1" value="1456773641"></td>
+         </tr>
+         <tr>
+            <td>
+               Chaser
+            </td>
+            <td><input type="checkbox" id="1weapon2" value="1460621839"></td>
+         </tr>
+         <tr>
+            <td>
+               Spread
+            </td>
+            <td><input type="checkbox" id="1weapon3" value="1456773649"></td>
+         </tr>
+         <tr>
+            <td>
+               Roundabout
+            </td>
+            <td><input type="checkbox" id="1weapon4" value="1466518900"></td>
+         </tr>
+         <tr>
+            <td>
+               Lobber
+            </td>
+            <td><input type="checkbox" id="1weapon5" value="1467024095"></td>
+         </tr>
+         <tr>
+            <td>
+               Charge
+            </td>
+            <td><input type="checkbox" id="1weapon6" value="1466416941"></td>
+         </tr>
+         <tr>
+            <td>
+               Aeroplane Mini-Bombs
+            </td>
+            <td><input type="checkbox" id="1weapon7" value="1492758857"></td>
+         </tr>
+         <tr>
+            <th>
+               Supers
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Super Art I
+            </td>
+            <td><input type="checkbox" id="1super1" value="1456815409"></td>
+         </tr>
+         <tr>
+            <td>
+               Super Art II
+            </td>
+            <td><input type="checkbox" id="1super2" value="1495012282"></td>
+         </tr>
+         <tr>
+            <td>
+               Super Art III
+            </td>
+            <td><input type="checkbox" id="1super3" value="1467617939"></td>
+         </tr>
+         <tr>
+            <th>
+               Charms
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Heart
+            </td>
+            <td><input type="checkbox" id="1charm1" value="1460832742"></td>
+         </tr>
+         <tr>
+            <td>
+               Smoke Bomb
+            </td>
+            <td><input type="checkbox" id="1charm2" value="1461001046"></td>
+         </tr>
+         <tr>
+            <td>
+               P. Sugar
+            </td>
+            <td><input type="checkbox" id="1charm3" value="1487051212"></td>
+         </tr>
+         <tr>
+            <td>
+               Coffee
+            </td>
+            <td><input type="checkbox" id="1charm4" value="1460880866"></td>
+         </tr>
+         <tr>
+            <td>
+               Whetstone
+            </td>
+            <td><input type="checkbox" id="1charm5" value="1500621999"></td>
+         </tr>
+         <tr>
+            <td>
+               Twin Heart
+            </td>
+            <td><input type="checkbox" id="1charm6" value="1500641115"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Player 2
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Primary
+            </td>
+            <td>
+               <select id="primaryWeapon2">
+                  <option value="1456773641">Peashooter</option>
+                  <option value="1460621839">Chaser</option>
+                  <option value="1456773649">Spread</option>
+                  <option value="1466518900">Roundabout</option>
+                  <option value="1467024095">Lobber</option>
+                  <option value="1466416941">Charge</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Secondary
+            </td>
+            <td>
+               <select id="secondaryWeapon2">
+                  <option value="2147483647">Empty</option>
+                  <option value="1456773641">Peashooter</option>
+                  <option value="1460621839">Chaser</option>
+                  <option value="1456773649">Spread</option>
+                  <option value="1466518900">Roundabout</option>
+                  <option value="1467024095">Lobber</option>
+                  <option value="1466416941">Charge</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Super
+            </td>
+            <td>
+               <select id="super2">
+                  <option value="2147483647">Empty</option>
+                  <option value="1456815409">Super Art I</option>
+                  <option value="1495012282">Super Art II</option>
+                  <option value="1467617939">Super Art III</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Charm
+            </td>
+            <td>
+               <select id="charm2">
+                  <option value="2147483647">Empty</option>
+                  <option value="1460832742">Heart</option>
+                  <option value="1461001046">Smoke Bomb</option>
+                  <option value="1487051212">P. Sugar</option>
+                  <option value="1460880866">Coffee</option>
+                  <option value="1500621999">Whetstone</option>
+                  <option value="1500641115">Twin Heart</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Deaths
+            </td>
+            <td><input type="number" id="deaths2" value="0"></td>
+         </tr>
+         <tr>
+            <td>
+               Parries in a row
+            </td>
+            <td><input type="number" id="parries2" value="0"></td>
+         </tr>
+         <tr>
+            <th>
+               Inventory
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Money
+            </td>
+            <td><input type="number" id="money2" value="0"></td>
+         </tr>
+         <tr>
+            <th>
+               Weapons
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Peashooter
+            </td>
+            <td><input checked type="checkbox" id="2weapon1" value="1456773641"></td>
+         </tr>
+         <tr>
+            <td>
+               Chaser
+            </td>
+            <td><input type="checkbox" id="2weapon2" value="1460621839"></td>
+         </tr>
+         <tr>
+            <td>
+               Spread
+            </td>
+            <td><input type="checkbox" id="2weapon3" value="1456773649"></td>
+         </tr>
+         <tr>
+            <td>
+               Roundabout
+            </td>
+            <td><input type="checkbox" id="2weapon4" value="1466518900"></td>
+         </tr>
+         <tr>
+            <td>
+               Lobber
+            </td>
+            <td><input type="checkbox" id="2weapon5" value="1467024095"></td>
+         </tr>
+         <tr>
+            <td>
+               Charge
+            </td>
+            <td><input type="checkbox" id="2weapon6" value="1466416941"></td>
+         </tr>
+         <tr>
+            <td>
+               Aeroplane Mini-Bombs
+            </td>
+            <td><input type="checkbox" id="2weapon7" value="1492758857"></td>
+         </tr>
+         <tr>
+            <th>
+               Supers
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Super Art I
+            </td>
+            <td><input type="checkbox" id="2super1" value="1456815409"></td>
+         </tr>
+         <tr>
+            <td>
+               Super Art II
+            </td>
+            <td><input type="checkbox" id="2super2" value="1495012282"></td>
+         </tr>
+         <tr>
+            <td>
+               Super Art III
+            </td>
+            <td><input type="checkbox" id="2super3" value="1467617939"></td>
+         </tr>
+         <tr>
+            <th>
+               Charms
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Heart
+            </td>
+            <td><input type="checkbox" id="2charm1" value="1460832742"></td>
+         </tr>
+         <tr>
+            <td>
+               Smoke Bomb
+            </td>
+            <td><input type="checkbox" id="2charm2" value="1461001046"></td>
+         </tr>
+         <tr>
+            <td>
+               P. Sugar
+            </td>
+            <td><input type="checkbox" id="2charm3" value="1487051212"></td>
+         </tr>
+         <tr>
+            <td>
+               Coffee
+            </td>
+            <td><input type="checkbox" id="2charm4" value="1460880866"></td>
+         </tr>
+         <tr>
+            <td>
+               Whetstone
+            </td>
+            <td><input type="checkbox" id="2charm5" value="1500621999"></td>
+         </tr>
+         <tr>
+            <td>
+               Twin Heart
+            </td>
+            <td><input type="checkbox" id="2charm6" value="1500641115"></td>
+         </tr>
+      </table>
+   </div>
+   <div id="Coinss" class="tabcontent">
+      <table align="center">
+         <tr>
+            <th>
+               Coins
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Juggler's
+            </td>
+            <td><input type="checkbox" id="juggler" value="1"></td>
+         </tr>
+         <tr>
+            <td>
+               Gingerbread Girl's
+            </td>
+            <td><input type="checkbox" id="ggirl" value="2"></td>
+         </tr>
+         <tr>
+            <td>
+               World 2 Hidden's
+            </td>
+            <td><input type="checkbox" id="hidworld" value="3"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Run n gun
+            </th>
+         </tr>
+         <tr>
+            <th>
+               1-1: Forest Follies
+            </th>
+         </tr>
+         <tr>
+            <td>
+               <input type="range" id="1464969490" min="0" max="5" value="0" onchange="firstfirst(this.value);">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <input type="text" id="1-1" value="0">
+            </td>
+         </tr>
+         <tr>
+            <th>
+               1-2: Treetop Trouble
+            </th>
+         </tr>
+         <tr>
+            <td>
+               <input type="range" id="1464969491" min="0" max="5" value="0" onchange="firstsecond(this.value);">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <input type="text" id="1-2" value="0">
+            </td>
+         </tr>
+         <tr>
+            <th>
+               2-1: Funfair Fever
+            </th>
+         </tr>
+         <tr>
+            <td>
+               <input type="range" id="1499704951" min="0" max="5" value="0" onchange="secondfirst(this.value);">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <input type="text" id="2-1" value="0">
+            </td>
+         </tr>
+         <tr>
+            <th>
+               2-2: Funhouse Frazzle
+            </th>
+         </tr>
+         <tr>
+            <td>
+               <input type="range" id="1496818712" min="0" max="5" value="0" onchange="secondsecond(this.value);">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <input type="text" id="2-2" value="0">
+            </td>
+         </tr>
+         <tr>
+            <th>
+               3-1: Perilous Piers
+            </th>
+         </tr>
+         <tr>
+            <td>
+               <input type="range" id="1464969492" min="0" max="5" value="0" onchange="thirdfirst(this.value);">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <input type="text" id="3-1" value="0">
+            </td>
+         </tr>
+         <tr>
+            <th>
+               3-2: Rugged Ridge
+            </th>
+         </tr>
+         <tr>
+            <td>
+               <input type="range" id="1464969493" min="0" max="5" value="0" onchange="thirdsecond(this.value);">
+            </td>
+         </tr>
+         <tr>
+            <td>
+               <input type="text" id="3-2" value="0">
+            </td>
+         </tr>
+      </table>
+   </div>
+   <div id="Levelss" class="tabcontent">
+      <!--   Levels:
             <br> -->
-         <table align="center">
-            <tr>
-               <th>
-                  Tutorial
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="0played" value="played"></td>
-            </tr>
-            <tr>
-               <td>
-                  Completed
-               </td>
-               <td><input type="checkbox" id="0completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>
-                  Grade
-               </td>
-               <td>
-                  <select id="0grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Difficulty
-               </td>
-               <td>
-                  <select id="0diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  Best Time
-               </td>
-               <td><input type="number" step=any id="0time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  The Elder Kettle
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1484633053played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1484633053completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1484633053grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1484633053diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1484633053time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Aeroplane Blueprint
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1504847973played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1504847973completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1504847973grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1504847973diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1504847973time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Mausoleum:
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1481199742played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1481199742completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1481199742grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1481199742diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1481199742time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  The Root Pack
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="6played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="6completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="6grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="6diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="6time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Goopy le Grande
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1450863107played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1450863107completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1450863107grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1450863107diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1450863107time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Ribby and Croaks
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="7played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="7completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="7grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="7diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="7time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Hilda Berg
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1449745424played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1449745424completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1449745424grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1449745424diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1449745424time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Cagney Carnation
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1450266910played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1450266910completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1450266910grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1450266910diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1450266910time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Baroness von Bon Bon
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1451300935played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1451300935completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1451300935grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1451300935diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1451300935time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Beppi the Clown
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1456125457played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1456125457completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1456125457grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1456125457diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1456125457time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Djimmi the Great
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1460200177played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1460200177completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1460200177grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1460200177diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1460200177time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Grim Matchstick
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1432722919played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1432722919completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1432722919grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1432722919diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1432722919time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Wally Warbles
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1428495827played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1428495827completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1428495827grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1428495827diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1428495827time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Rumor Honeybottoms
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1429976377played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1429976377completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1429976377grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1429976377diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1429976377time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Captain Brineybeard
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="2played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="2completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="2grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="2diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="2time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Sally Stageplay
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1456740288played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1456740288completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1456740288grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1456740288diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1456740288time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Werner Werman
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1430652919played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1430652919completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1430652919grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1430652919diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1430652919time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Dr. Kahl's Robot
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1452935394played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1452935394completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1452935394grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1452935394diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1452935394time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Cala Maria
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1446558823played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1446558823completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1446558823grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1446558823diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1446558823time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Phantom Express
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="5played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="5completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="5grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="5diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="5time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Casino: Pip and Dot
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1458062114played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1458062114completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1458062114grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1458062114diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1458062114time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Casino: Chips Bettigan
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1458336090played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1458336090completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1458336090grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1458336090diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1458336090time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Casino: Mr. Wheezy
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1458551456played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1458551456completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1458551456grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1458551456diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1458551456time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Casino: Tipsy Troop
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1458719430played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1458719430completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1458719430grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1458719430diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1458719430time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Casino: Pirouletta
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1459105708played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1459105708completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1459105708grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1459105708diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1459105708time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Casino: Hopus Pocus
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1459928905played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1459928905completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1459928905grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1459928905diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1459928905time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Casino: Phear Lap
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1463479514played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1463479514completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1463479514grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1463479514diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1463479514time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Casino: Mr. Chimes
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1464322003played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1464322003completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1464322003grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1464322003diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1464322003time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Casino: Mangosteen
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1468483834played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1468483834completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1468483834grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1468483834diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1468483834time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  Die House
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1495090481played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1495090481completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1495090481grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1495090481diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1495090481time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  King Dice
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1465296077played" value="played"></td>
-            </tr>
-            <tr>
-               <td>Completed</td>
-               <td><input type="checkbox" id="1465296077completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1465296077grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1465296077diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1465296077time" value="0"></td>
-            </tr>
-         </table>
-         <table align="center">
-            <tr>
-               <th>
-                  The Devil
-               </th>
-            </tr>
-            <tr>
-               <td>
-                  Played
-               </td>
-               <td><input type="checkbox" id="1466688317played" value="played"></td>
-            </tr>
-            <tr>
-               <td>
-                  Completed
-               </td>
-               <td><input type="checkbox" id="1466688317completed" value="completed"></td>
-            </tr>
-            <tr>
-               <td>Grade</td>
-               <td>
-                  <select id="1466688317grade">
-                     <option value="0">Not played / D-</option>
-                     <option value="1">D</option>
-                     <option value="2">D+</option>
-                     <option value="3">C-</option>
-                     <option value="4">C</option>
-                     <option value="5">C+</option>
-                     <option value="6">B-</option>
-                     <option value="7">B</option>
-                     <option value="8">B+-</option>
-                     <option value="9">A-</option>
-                     <option value="10">A</option>
-                     <option value="11">A+</option>
-                     <option value="12">S</option>
-                     <option value="13">P</option>
-                  </select>
-               </td>
-            </tr>
-            <tr>
-               <td>Difficulty</td>
-               <td>
-                  <select id="1466688317diff">
-                     <option value="0">Simple</option>
-                     <option value="1" selected>Regular</option>
-                     <option value="2">Expert</option>
-                  </select>
-            <tr>
-               <td>Best Time</td>
-               <td><input type="number" step=any id="1466688317time" value="0"></td>
-            </tr>
-         </table>
-      </div>
-      <div id="Preview" class="tabcontent" style="text-align: left;overflow: auto;">
-         <table align="center" style="text-align: left;overflow: auto;">
-            <tr>
-               <td>
-                  <pre id="file-content" style="text-align: left;overflow: auto;"></pre>
-               </td>
-            </tr>
-         </table>
-      </div>
+      <table align="center">
+         <tr>
+            <th>
+               Tutorial
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="0played" value="played"></td>
+         </tr>
+         <tr>
+            <td>
+               Completed
+            </td>
+            <td><input type="checkbox" id="0completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>
+               Grade
+            </td>
+            <td>
+               <select id="0grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Difficulty
+            </td>
+            <td>
+               <select id="0diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>
+               Best Time
+            </td>
+            <td><input type="number" step=any id="0time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               The Elder Kettle
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1484633053played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1484633053completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1484633053grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1484633053diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1484633053time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Aeroplane Blueprint
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1504847973played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1504847973completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1504847973grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1504847973diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1504847973time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Mausoleum:
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1481199742played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1481199742completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1481199742grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1481199742diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1481199742time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               The Root Pack
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="6played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="6completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="6grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="6diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="6time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Goopy le Grande
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1450863107played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1450863107completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1450863107grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1450863107diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1450863107time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Ribby and Croaks
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="7played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="7completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="7grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="7diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="7time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Hilda Berg
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1449745424played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1449745424completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1449745424grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1449745424diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1449745424time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Cagney Carnation
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1450266910played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1450266910completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1450266910grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1450266910diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1450266910time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Baroness von Bon Bon
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1451300935played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1451300935completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1451300935grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1451300935diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1451300935time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Beppi the Clown
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1456125457played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1456125457completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1456125457grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1456125457diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1456125457time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Djimmi the Great
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1460200177played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1460200177completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1460200177grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1460200177diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1460200177time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Grim Matchstick
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1432722919played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1432722919completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1432722919grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1432722919diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1432722919time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Wally Warbles
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1428495827played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1428495827completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1428495827grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1428495827diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1428495827time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Rumor Honeybottoms
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1429976377played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1429976377completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1429976377grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1429976377diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1429976377time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Captain Brineybeard
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="2played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="2completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="2grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="2diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="2time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Sally Stageplay
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1456740288played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1456740288completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1456740288grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1456740288diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1456740288time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Werner Werman
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1430652919played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1430652919completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1430652919grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1430652919diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1430652919time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Dr. Kahl's Robot
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1452935394played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1452935394completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1452935394grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1452935394diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1452935394time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Cala Maria
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1446558823played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1446558823completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1446558823grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1446558823diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1446558823time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Phantom Express
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="5played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="5completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="5grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="5diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="5time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Casino: Pip and Dot
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1458062114played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1458062114completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1458062114grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1458062114diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1458062114time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Casino: Chips Bettigan
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1458336090played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1458336090completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1458336090grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1458336090diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1458336090time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Casino: Mr. Wheezy
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1458551456played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1458551456completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1458551456grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1458551456diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1458551456time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Casino: Tipsy Troop
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1458719430played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1458719430completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1458719430grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1458719430diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1458719430time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Casino: Pirouletta
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1459105708played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1459105708completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1459105708grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1459105708diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1459105708time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Casino: Hopus Pocus
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1459928905played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1459928905completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1459928905grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1459928905diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1459928905time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Casino: Phear Lap
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1463479514played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1463479514completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1463479514grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1463479514diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1463479514time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Casino: Mr. Chimes
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1464322003played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1464322003completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1464322003grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1464322003diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1464322003time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Casino: Mangosteen
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1468483834played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1468483834completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1468483834grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1468483834diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1468483834time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               Die House
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1495090481played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1495090481completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1495090481grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1495090481diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1495090481time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               King Dice
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1465296077played" value="played"></td>
+         </tr>
+         <tr>
+            <td>Completed</td>
+            <td><input type="checkbox" id="1465296077completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1465296077grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1465296077diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1465296077time" value="0"></td>
+         </tr>
+      </table>
+      <table align="center">
+         <tr>
+            <th>
+               The Devil
+            </th>
+         </tr>
+         <tr>
+            <td>
+               Played
+            </td>
+            <td><input type="checkbox" id="1466688317played" value="played"></td>
+         </tr>
+         <tr>
+            <td>
+               Completed
+            </td>
+            <td><input type="checkbox" id="1466688317completed" value="completed"></td>
+         </tr>
+         <tr>
+            <td>Grade</td>
+            <td>
+               <select id="1466688317grade">
+                  <option value="0">Not played / D-</option>
+                  <option value="1">D</option>
+                  <option value="2">D+</option>
+                  <option value="3">C-</option>
+                  <option value="4">C</option>
+                  <option value="5">C+</option>
+                  <option value="6">B-</option>
+                  <option value="7">B</option>
+                  <option value="8">B+-</option>
+                  <option value="9">A-</option>
+                  <option value="10">A</option>
+                  <option value="11">A+</option>
+                  <option value="12">S</option>
+                  <option value="13">P</option>
+               </select>
+            </td>
+         </tr>
+         <tr>
+            <td>Difficulty</td>
+            <td>
+               <select id="1466688317diff">
+                  <option value="0">Simple</option>
+                  <option value="1" selected>Regular</option>
+                  <option value="2">Expert</option>
+               </select>
+         <tr>
+            <td>Best Time</td>
+            <td><input type="number" step=any id="1466688317time" value="0"></td>
+         </tr>
+      </table>
+   </div>
+   <div id="Preview" class="tabcontent" style="text-align: left;overflow: auto;">
+      <table align="center" style="text-align: left;overflow: auto;">
+         <tr>
+            <td>
+               <pre id="file-content" style="text-align: left;overflow: auto;"></pre>
+            </td>
+         </tr>
+      </table>
+   </div>
 
-      <div id="howto" style="margin: 20px">
-        <div style="font-size: 30px">
-        HOW TO
-        </div><br>
-        - Click "Browse..."<br><br>
-        - Select your Cuphead Save File (%APPDATA%\Cuphead)<br><br>
-        - Edit it by using the tabs above<br><br>
-        - Export it<br><br>
-        - Replace it!<br><br>
-        <div style="font-size: 30px">
-        !BACKUP BEFORE REPLACING!
-        </div>
+   <div id="howto" style="margin: 20px">
+      <div style="font-size: 30px">
+         HOW TO
+      </div><br>
+      - Click "Browse..."<br><br>
+      - Select your Cuphead Save File (%APPDATA%\Cuphead)<br><br>
+      - Edit it by using the tabs above<br><br>
+      - Export it<br><br>
+      - Replace it!<br><br>
+      <div style="font-size: 30px">
+         !BACKUP BEFORE REPLACING!
       </div>
+   </div>
 
-      <!-- JS -->
-      <script src="./assets/js/modal.js"></script>
-      <script>
-         var modal = new VanillaModal.default();
-      </script>
-      <script async defer src="https://buttons.github.io/buttons.js"></script>
-      <script type="text/javascript" src="main.js"></script>
-      <script type="text/javascript">
-         function firstfirst(val) {
-                 document.getElementById('1-1').value=val; 
-               }
-               function firstsecond(val) {
-                 document.getElementById('1-2').value=val; 
-               }
-               function secondfirst(val) {
-                 document.getElementById('2-1').value=val; 
-               }
-               function secondsecond(val) {
-                 document.getElementById('2-2').value=val; 
-               }
-               function thirdfirst(val) {
-                 document.getElementById('3-1').value=val; 
-               }
-               function thirdsecond(val) {
-                 document.getElementById('3-2').value=val; 
-               }
-         
-               function openTab(evt, cityName) {
-                document.getElementById("howto").style.display="none"
+   <!-- JS -->
+   <script src="./assets/js/modal.js"></script>
+   <script>
+      var modal = new VanillaModal.default();
+   </script>
+   <script async defer src="https://buttons.github.io/buttons.js"></script>
+   <script type="text/javascript" src="main.js"></script>
+   <script type="text/javascript">
+      function firstfirst(val) {
+         document.getElementById('1-1').value = val;
+      }
+      function firstsecond(val) {
+         document.getElementById('1-2').value = val;
+      }
+      function secondfirst(val) {
+         document.getElementById('2-1').value = val;
+      }
+      function secondsecond(val) {
+         document.getElementById('2-2').value = val;
+      }
+      function thirdfirst(val) {
+         document.getElementById('3-1').value = val;
+      }
+      function thirdsecond(val) {
+         document.getElementById('3-2').value = val;
+      }
+
+      function openTab(evt, cityName) {
+         document.getElementById("howto").style.display = "none"
          var i, tabcontent, tablinks;
          tabcontent = document.getElementsByClassName("tabcontent");
          for (i = 0; i < tabcontent.length; i++) {
-           tabcontent[i].style.display = "none";
+            tabcontent[i].style.display = "none";
          }
          tablinks = document.getElementsByClassName("tablinks");
          for (i = 0; i < tablinks.length; i++) {
-           tablinks[i].className = tablinks[i].className.replace(" active", "");
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
          }
          document.getElementById(cityName).style.display = "block";
          evt.currentTarget.className += " active";
-         }
-         document.getElementById("savebtn").disabled = true;
-      </script>
-   </body>
-</html>
+      }
+      document.getElementById("savebtn").disabled = true;
+   </script>
+</body>
 
+</html>

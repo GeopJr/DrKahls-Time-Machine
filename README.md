@@ -1,11 +1,11 @@
+# Unmaintained
+
+This has been unmaintained for years. The new DLC probably added and/or changed stuff and this editor doesn't probably work anymore.
+
 <div align="center">
 <br />
   <p>
     <img src="https://i.imgur.com/wHOxbqh.png"/>
-  </p>
-  <br />
-  <p>
-    <a href="https://github.com/GeopJr/DrKahls-Time-Machine/blob/master/LICENSE"><img src="https://img.shields.io/badge/LICENSE-MIT-000000.svg" alt="MIT" /></a>
   </p>
 </div>
 
@@ -30,10 +30,3 @@ An online Cuphead save editor
 ### Thanks to [crumblingstatue](https://github.com/crumblingstatue) for the general idea (and name)
 
 ### [Vanilla Modal](https://github.com/benceg/vanilla-modal) by [benceg](https://github.com/benceg)
-
-<div align="center">
-  <br />
-  <p>
-    <img src="https://i.imgur.com/HEtVbUc.png" alt="info"/></a>
-  </p>
-  </div>
